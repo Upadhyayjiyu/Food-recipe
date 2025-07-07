@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fafafa;
+    color: #333;
+}
+header {
+    background: url('https://images.unsplash.com/photo-1551218808-94e220e084d2') center/cover;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+header h1 {
+    font-size: 3rem;
+}
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+nav.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+nav.tabs button {
+    background: #eee;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+nav.tabs button.active,
+nav.tabs button:hover {
+    background: #e63946;
+    color: white;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+.recipe, .order {
+    flex: 1 1 320px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    animation: fadeIn 1s ease;
+}
+.recipe img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.recipe-content {
+    padding: 1.5rem;
+}
+.recipe-content h2 {
+    margin-bottom: 0.5rem;
+}
+.badges {
+    margin-bottom: 1rem;
+}
+.badge {
+    display: inline-block;
+    background: #ffb703;
+    color: #fff;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+.star-rating {
+    color: #ffb703;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.recipe-content ul, .recipe-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+.chef-note {
+    background: #f0f0f0;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 5px solid #e63946;
+}
+.order {
+    padding: 1.5rem;
+}
+.order form {
+    display: flex;
+    flex-direction: column;
+}
+.order form label {
+    margin: 0.5rem 0 0.2rem;
+}
+.order form select, 
+.order form input[type="number"] {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.order form button {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.order form button:hover {
+    background: #d62828;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    margin-top: 2rem;
+}
+@media(max-width: 768px){
+    main {
+        flex-direction: column;
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

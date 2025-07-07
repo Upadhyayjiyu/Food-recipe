@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Recipe & Food Order</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Gourmet Kitchen</h1>
+        <p>Fresh, Fast & Delicious Recipes</p>
+    </header>
+    <nav class="tabs">
+        <button class="tab active" data-recipe="pizza">Pizza</button>
+        <button class="tab" data-recipe="burger">Burger</button>
+        <button class="tab" data-recipe="pasta">Pasta</button>
+    </nav>
+    <main>
+        <section class="recipe" id="recipe-display">
+            <!-- Filled by JS -->
+        </section>
+        <section class="order">
+            <h2>Customize Your Order</h2>
+            <form>
+                <label>Size:</label>
+                <select>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+                <label>Add-ons:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Extra Cheese</label>
+                    <label><input type="checkbox"> Jalapeños</label>
+                    <label><input type="checkbox"> Olives</label>
+                </div>
+                <label>Quantity:</label>
+                <input type="number" min="1" value="1" />
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Gourmet Kitchen</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
